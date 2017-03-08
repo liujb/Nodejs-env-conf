@@ -1,5 +1,5 @@
 {
-  "name": "Nodejs-env-conf",
+  "name": "expressjs-env-conf",
   "version": "1.0.1",
   "description": "Nodejs project env config",
   "main": "build/index.js",

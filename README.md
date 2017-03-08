@@ -24,7 +24,7 @@ export default config[env]
 # Install
 
 ```
-npm install Nodejs-env-conf -S
+npm install expressjs-env-conf -S
 ```
 
 # Using
