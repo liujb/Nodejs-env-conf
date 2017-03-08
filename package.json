@@ -1,0 +1,30 @@
+{
+  "name": "mfe-node-env-conf",
+  "version": "1.0.1",
+  "description": "Manhattan Nodejs project env config",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "babel src -d build",
+    "example": "babel-node example/test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.xiaojukeji.com:manhattan-fe/mfe-node-env-conf.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "env",
+    "config"
+  ],
+  "author": "liujiangbei <liujiangbei88@gmail.com> (http://blog.liujiangbei.com)",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0"
+  }
+}
