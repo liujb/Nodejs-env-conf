@@ -6,12 +6,12 @@ Expressjs 本身缺乏一个根据不同的环境来加载对应的配置文件�
 const env = process.env.NODE_ENV || 'development'
 const config = {
   production: {
-    sms: 'http://10.231.158.59:8000/jet/textmessage',
+    sms: 'http://xx.xx.158.59:8000/jet/textmessage',
     vehicleInfo: 'http://cx.ins.xiaojukeji.com/quote/queryVehicleInfoForAppointment.json',
   },
   development: {
-    sms: 'http://10.94.100.63:8010/jet/textmessage',
-    vehicleInfo: 'http://10.94.96.131:8002/quote/queryVehicleInfoForAppointment.json',
+    sms: 'http://xx.xx.100.63:8010/jet/textmessage',
+    vehicleInfo: 'http://xx.xx.96.131:8002/quote/queryVehicleInfoForAppointment.json',
   },
   preview: { 
   },
@@ -24,7 +24,7 @@ export default config[env]
 # Install
 
 ```
-npm install mfe-node-env-conf -S
+npm install Nodejs-env-conf -S
 ```
 
 # Using

@@ -1,7 +1,7 @@
 {
-  "name": "mfe-node-env-conf",
+  "name": "Nodejs-env-conf",
   "version": "1.0.1",
-  "description": "Manhattan Nodejs project env config",
+  "description": "Nodejs project env config",
   "main": "build/index.js",
   "scripts": {
     "build": "babel src -d build",
@@ -10,14 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.xiaojukeji.com:manhattan-fe/mfe-node-env-conf.git"
+    "url": "https://github.com/liujb/Nodejs-env-conf.git"
   },
   "keywords": [
     "Nodejs",
     "env",
+    "Expressjs",
     "config"
   ],
-  "author": "liujiangbei <liujiangbei88@gmail.com> (http://blog.liujiangbei.com)",
+  "author": "liujiangbei <liujiangbei88@gmail.com> (http://liujiangbei.com)",
   "license": "MIT",
   "dependencies": {
   },
