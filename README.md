@@ -54,10 +54,10 @@ console.log(testConf)
 
 # API
 
-所以能导出的对象
+所有能导出的对象
 
 ```
-import { env, EnvConf } from 'mfe-node-env-conf'
+import { env, EnvConf } from 'Nodejs-env-conf'
 ```
 
 ## new EnvConf(configBaseDir)
