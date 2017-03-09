@@ -7,7 +7,7 @@ const env = process.env.NODE_ENV || 'development'
 const config = {
   production: {
     sms: 'http://xx.xx.158.59:8000/jet/textmessage',
-    vehicleInfo: 'http://cx.ins.xiaojukeji.com/quote/queryVehicleInfoForAppointment.json',
+    vehicleInfo: 'http://cx.ins.xiaobeixx.com/quote/queryVehicleInfoForAppointment.json',
   },
   development: {
     sms: 'http://xx.xx.100.63:8010/jet/textmessage',
@@ -116,7 +116,7 @@ npm run build
 # 发版说明
 
 
-## 1.0.0
+## 1.0.1
 
 修复如果baseDir不存在的情况下，程序报的BUG
 
