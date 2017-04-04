@@ -1,5 +1,7 @@
 # Introduce
 
+[![Join the chat at https://gitter.im/liujb/Nodejs-env-conf](https://badges.gitter.im/liujb/Nodejs-env-conf.svg)](https://gitter.im/liujb/Nodejs-env-conf?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Expressjs 本身缺乏一个根据不同的环境来加载对应的配置文件的机制，这会导致很多配置都写在同一个文件下通过env来区分，会出现大量
 
 ```
