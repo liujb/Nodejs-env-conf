@@ -1,6 +1,6 @@
-# Introduce
+# 简介
 
-Expressjs 本身缺乏一个根据不同的环境来加载对应的配置文件的机制，这会导致很多配置都写在同一个文件下通过env来区分，会出现大量
+`Expressjs` 本身缺乏根据不同的环境来加载对应的配置文件的机制，这会导致很多配置都写在同一个文件下通过env来区分，我们的项目中会出现大量诸如
 
 ```
 const env = process.env.NODE_ENV || 'development'
@@ -18,25 +18,22 @@ const config = {
 }
 export default config[env]
 ```
-配置多了，就不方便管理且影响代码的简洁，整体的思路类似PHP的CI框架。
+
+配置多了，就不方便管理且影响代码的简洁，之前使用过PHP的CI框架，所以就想着能不能在Express体系下也进入该机制。
 
 
-# Install
+# 安装
 
 ```
 npm install expressjs-env-conf -S
 ```
 
-# Using
+# 使用
 
-> 在我们的场景下，需要手工在config文件夹下创建`development`， `production`， `test`, `preview` 四个文件夹代表不同的环境配置存储位置。
-
-因为我们在研发时候就执行的是output下的代码，所以会在`output/config`下检测是否有以上4个文件夹，若没有则会创建。
-
-然后我们在程序启动的入口处执行，
+在程序的入口处，一般是`app.js`上引入
 
 ```
-import { EnvConf } from 'mfe-node-env-conf'
+import { EnvConf } from 'expressjs-env-conf'
 new EnvConf(config.root).init()
 ```
 
@@ -77,24 +74,8 @@ import { env, EnvConf } from 'Nodejs-env-conf'
 
 ## env.init()
 
-> 初始化`process.env.NODE_ENV`，在当前的体系下，比如发布预览环境，没有地方设置参数为preview，这个地方根据特定的情况，进行相关初始化，具体参考
+初始化`process.env.NODE_ENV`
 
-```
-function init () {
-  let env = process.env.NODE_ENV
-  const envs = new Set(ALLOW_ENV)
-
-  if (env && !envs.has(env)) {
-    return process.exit(`Env is invalid.`)
-  }
-  if (!env) {
-    process.env.NODE_ENV = 'development'
-  }
-  if (os.hostname() === PREVIEW_HOSTNAME) {
-    process.env.NODE_ENV = 'preview'
-  }
-}
-```
 ## env.set()
 
 设置`process.env.NODE_ENV`，但是有一些约束条件。
@@ -113,8 +94,11 @@ npm run build
 }
 ```
 
-# 发版说明
+# CHANGELOG
 
+## 1.0.2
+
+1. 部分代码重构。
 
 ## 1.0.1
 
@@ -122,4 +106,4 @@ npm run build
 
 ## 1.0.0
 
-First commit
+完成基本功能
